@@ -3,7 +3,7 @@ package Model;
 public class User {
     private String username;
     private String password;
-    private int nextId = 1;
+    private static int nextId = 1;
     private int id;
     public User (String username, String password) {
         this.username = username;

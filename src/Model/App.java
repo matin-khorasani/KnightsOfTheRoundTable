@@ -34,7 +34,7 @@ public class App {
         return currentLoggedInUser;
     }
 
-    public void setCurrentLoggedInUser(User currentLogedInUser) {
-        this.currentLoggedInUser = currentLogedInUser;
+    public void setCurrentLoggedInUser(User currentLoggedInUser) {
+        this.currentLoggedInUser = currentLoggedInUser;
     }
 }
