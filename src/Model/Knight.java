@@ -103,6 +103,7 @@ public class Knight {
         return speedPercent;
     }
 
+
     public void setDamageDealt(int damageDealt) {
         this.damageDealt = damageDealt;
     }
@@ -138,15 +139,6 @@ public class Knight {
     public void applyDamage(int damage, Knight attacker) {
         this.setHp(this.getHp() - damage);
         attacker.setDamageDealt(attacker.getDamageDealt() + damage);
-    }
-    public boolean dodgeStatus(Knight attacker) {
-        KnightClass attackerClass = attacker.getKnightName().getKnightClass();
-        if (attackerClass == KnightClass.COMMANDER || attackerClass == KnightClass.WARRIOR) {
-            return attacker.getCurrentAttack() < this.getCurrentSpeed();
-        } else if (attackerClass == KnightClass.MAGE || attackerClass == KnightClass.HEALER) {
-            return attacker.getCurrentMagicAttack() < this.getCurrentSpeed();
-        }
-        return false;
     }
     public void resetToBaseStats() {
         this.attackPercent = 100;
